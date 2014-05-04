@@ -1,0 +1,21 @@
+# view AndroidManifest.xml #generated:72
+-keep class android.box.systools.ActionReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class android.box.systools.BootReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class android.box.systools.BootService { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class android.box.systools.LauncherActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class android.box.systools.VoiceSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:58
+-keep class android.hmm.lib.AboutSysActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class android.hmm.lib.BaseApplication { <init>(...); }
+

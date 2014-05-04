@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SystemTools</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="action_voice">voice</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_screen_info">screenInfo</string>
+    <string name="action_screen_rotate">screenRotate</string>
+    <string name="action_gprs">GPRS</string>
+    <string name="action_bright">bright</string>
+    <string name="action_sync">sync</string>
+    <string name="action_bluetooth">bluetooth</string>
+	<string name="action_usb">usb</string>
+	<string name="action_adb_wifi">wifi-adb</string>
+	
+	
+</resources>

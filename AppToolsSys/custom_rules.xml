@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <target name="rename-release-with-version-number" >
+
+        <!-- see ${sdk.dir}/tools/ant/build.xml -set-release-mode -->
+
+        <property
+            name="apk_name"
+            value="SystemTools" />
+
+        <property
+            name="out.release"
+            value="${apk_name}-release.apk" />
+
+        <property
+            name="out.release.unsigned"
+            value="${apk_name}-release-unsigned.apk" />
+
+        <property
+            name="out.packaged.file"
+            location="${out.absolute.dir}/-release-unsigned.apk" />
+
+        <property
+            name="out.final.file"
+            location="${out.absolute.dir}/${ant.project.name}-release.apk" />
+    </target>
+    
+    <target name="-rename" >
+        <exec
+            executable="mv" >
+
+            <arg value="${out.packaged.file}" />
+
+            <arg value="aa" />
+        </exec>
+    </target>
+
+    <target
+        name="-post-build"
+        depends="android_rules.-post-build" >
+
+        <!-- 签名 -->
+        <!-- java -jar signapk.jar platform.x509.pem platform.pk8 TVJU.apk new.apk -->
+
+        <exec
+            executable="java"
+            failonerror="true" >
+
+            <arg value="-jar" />
+
+            <arg value="D:\company\sign\signapk.jar" />
+
+            <arg value="D:\company\sign\platform.x509.pem" />
+
+            <arg value="D:\company\sign\platform.pk8" />
+
+            <arg value="${out.packaged.file}" />
+
+            <arg value="D:\work\android\buildApp\SystemTools" />
+        </exec>
+    </target>
+
+</project>

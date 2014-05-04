@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_voice"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_voice"/>
+    <item
+        android:id="@+id/action_screen_info"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_screen_info"/>
+    <item
+        android:id="@+id/action_adb_wifi"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_adb_wifi"/>
+    <item
+        android:id="@+id/action_screen_rotate"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_screen_rotate"/>
+    <item
+        android:id="@+id/action_usb"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_usb"/>
+    <item
+        android:id="@+id/action_sync"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_sync"/>
+    <item
+        android:id="@+id/action_bluetooth"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_bluetooth"/>
+    <item
+        android:id="@+id/action_gprs"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_gprs"/>
+    <item
+        android:id="@+id/action_bright"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_bright"/>
+
+</menu>

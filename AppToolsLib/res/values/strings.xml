@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BoxTools</string>
+    <string name="app_setting">BoxSetting</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- 关于 -->
+    <string name="aboutsys_opentime">开机运行时间</string>
+    <string name="aboutsys_runcount">程序运行次数</string>
+    <string name="aboutsys_runtime">程序运行时间</string>
+    <string name="aboutsys_battery">电池</string>
+    <string name="aboutsys_location">位置</string>
+    <string name="aboutsys_cpu">CPU</string>
+    <string name="aboutsys_modle">型号</string>
+    <string name="aboutsys_manufacturer">制造商</string>
+    <string name="aboutsys_device">设备</string>
+    <string name="aboutsys_brand">品牌</string>
+    <string name="aboutsys_serial">SERIAL</string>
+    <string name="aboutsys_sdk">SDK版本</string>
+    <string name="aboutsys_release">Android版本</string>
+
+</resources>

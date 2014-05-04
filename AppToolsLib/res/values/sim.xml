@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="aboutsys_sim_deviceid">设备ID</string>
+    <string name="aboutsys_sim_devicesoftwareversion">设备的软件版本号</string>
+    <string name="aboutsys_sim_line1number">手机号</string>
+    <string name="aboutsys_sim_networkcountryiso">提供网络的国家码</string>
+    <string name="aboutsys_sim_networkoperator">networkoperator</string>
+    <string name="aboutsys_sim_networkoperatorname">注册的用户名</string>
+    <string name="aboutsys_sim_networktype">网络类型</string>
+    <string name="aboutsys_sim_phonetype">手机类型</string>
+    <string name="aboutsys_sim_simcountryiso">提供SIM卡的国家码</string>
+    <string name="aboutsys_sim_simoperator">simoperator</string>
+    <string name="aboutsys_sim_simoperatorname">服务商</string>
+    <string name="aboutsys_sim_simserialnumber">SIM卡序列号</string>
+    <string name="aboutsys_sim_simstate">SIM状态信息</string>
+    <string name="aboutsys_sim_subscriberid">唯一的用户ID</string>
+    <string name="aboutsys_sim_voicemailalphatag">语音邮件相关的标签</string>
+    <string name="aboutsys_sim_voicemailnumber">语音邮件号码</string>
+    <string name="aboutsys_sim_hasicccard">ICC卡是否存在</string>
+    <string name="aboutsys_sim_networkroaming">是否漫游</string>
+
+</resources>

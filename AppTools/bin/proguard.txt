@@ -1,0 +1,18 @@
+# view AndroidManifest.xml #generated:75
+-keep class android.box.tools.ExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class android.box.tools.Launcher { <init>(...); }
+
+# view AndroidManifest.xml #generated:66
+-keep class android.box.tools.TestActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class android.hmm.lib.AboutSysActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class android.hmm.lib.BaseApplication { <init>(...); }
+
+# view res/layout/layout_base_viewpager.xml #generated:4
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
