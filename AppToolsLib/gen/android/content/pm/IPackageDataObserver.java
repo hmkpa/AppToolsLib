@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /media/000571A100043F3A/work/android/androidWorkspace/AppToolsLib/src/android/content/pm/IPackageDataObserver.aidl
+ * Original file: D:\\work\\android\\androidWorkspace\\AppToolsLib\\src\\android\\content\\pm\\IPackageDataObserver.aidl
  */
 package android.content.pm;
 /** 

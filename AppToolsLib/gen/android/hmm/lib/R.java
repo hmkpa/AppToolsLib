@@ -9,9 +9,12 @@ package android.hmm.lib;
 
 public final class R {
     public static final class anim {
-        public static int loading_progress=0x7f030000;
-        public static int popup_enter_menuwobo=0x7f030001;
-        public static int popup_exit_menuwobo=0x7f030002;
+        public static int list_anim_layout=0x7f030000;
+        public static int list_item_animation=0x7f030001;
+        public static int list_item_animation_1=0x7f030002;
+        public static int loading_progress=0x7f030003;
+        public static int popup_enter_menuwobo=0x7f030004;
+        public static int popup_exit_menuwobo=0x7f030005;
     }
     public static final class array {
         public static int month_name=0x7f040000;
@@ -91,6 +94,7 @@ containing a value of this type.
         /**  关于 
          */
         public static int aboutsys_opentime=0x7f070016;
+        public static int aboutsys_other=0x7f070023;
         public static int aboutsys_release=0x7f070022;
         public static int aboutsys_runcount=0x7f070017;
         public static int aboutsys_runtime=0x7f070018;
