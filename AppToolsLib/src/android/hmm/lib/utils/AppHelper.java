@@ -190,7 +190,7 @@ public class AppHelper {
 		appInfo.setPackageName(app.packageName);
 		appInfo.setClassName(app.className);
 
-		appInfo.setPermisson(getPermisson(pm, app.packageName));
+//		appInfo.setPermisson(getPermisson(pm, app.packageName));
 		appInfo.sePosition(getAppInstallPosition(context, app.packageName));
 		appInfo.setTypeGroup(isUserApp(app) ? AppInfo.type_group_user
 				: AppInfo.type_group_system);
@@ -205,7 +205,7 @@ public class AppHelper {
 			
 			String appFile = app.sourceDir;
 			long installed = new File(appFile).lastModified();
-			UsageStat usageStat = getUsageStat(app);
+//			UsageStat usageStat = getUsageStat(app);//apk需要在system目录下才行
 			
 			// 更新显示当前包得大小信息
 			queryPacakgeSize(pm, appInfo);

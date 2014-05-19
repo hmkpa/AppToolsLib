@@ -107,7 +107,7 @@ public class ScreenHelper {
 
 	/**
 	 * 全屏 注意：有些方法是要看底层硬件处理
-	 * @param context :Activity
+	 * @param activity :Activity
 	 */
 	public static void setFullScreen(Activity activityReference) {
 		activityReference.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 

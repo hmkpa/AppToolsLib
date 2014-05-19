@@ -196,6 +196,7 @@ public class AboutSysActivity extends ConfigActivity {
 				}
 				list.add(initItem(R.string.aboutsys_location, text));
 
+				list.add(initItem(R.string.aboutsys_other, MobileHelper.getOther(getApplicationContext())));
 				list.add(initItem(R.string.aboutsys_modle, MobileHelper.getModel()));
 				list.add(initItem(R.string.aboutsys_brand, MobileHelper.getBrand()));
 				list.add(initItem(R.string.aboutsys_device, MobileHelper.getDevice()));

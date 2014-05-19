@@ -42,7 +42,7 @@ public class BaseViewPager extends FrameLayout implements android.view.View.OnCl
 		this.context = (Activity) context;
 	}
 	
-	public void initViews() {
+	public void initBaseViews() {
 //		LayoutInflater.from(getContext()).inflate(R.layout.layout_base_viewpager, this, true);
 //		mViewPager = (ViewPager) findViewById(R.id.viewpager);
 //		mBottomBar = (RadioGroup) findViewById(R.id.bottombar);

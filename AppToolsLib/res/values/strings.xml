@@ -20,5 +20,5 @@
     <string name="aboutsys_serial">SERIAL</string>
     <string name="aboutsys_sdk">SDK版本</string>
     <string name="aboutsys_release">Android版本</string>
-
+	<string name="aboutsys_other">其他</string>
 </resources>

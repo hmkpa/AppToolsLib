@@ -24,9 +24,16 @@ public class IPHelper {
 		try {
 			for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
 				NetworkInterface intf = en.nextElement();
+				String intfName = intf.getName();intf.getDisplayName();intf.isUp();intf.isPointToPoint();intf.getHardwareAddress();intf.getInterfaceAddresses();intf.getSubInterfaces();
+				if (null != intfName && intfName.toLowerCase().startsWith("p2p")) {
+					continue;
+				}
 				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
 					InetAddress inetAddress = enumIpAddr.nextElement();
-					if (!inetAddress.isLoopbackAddress() && (inetAddress instanceof java.net.Inet4Address)) { 
+					if (!inetAddress.isLoopbackAddress() && 
+							!inetAddress.isLinkLocalAddress() && 
+							inetAddress.isSiteLocalAddress() && 
+							(inetAddress instanceof java.net.Inet4Address)) { 
 						return inetAddress.getHostAddress(); 
 					}
 				}

@@ -27,7 +27,7 @@ import android.widget.TextView;
 
 /**
  * 构造方法
- * @param context 调用方的上下文
+ * @param activity 调用方的上下文
  * @param titleClick 菜单点击事件
  */
 public class MenuView extends Dialog implements OnKeyListener, android.view.View.OnClickListener {

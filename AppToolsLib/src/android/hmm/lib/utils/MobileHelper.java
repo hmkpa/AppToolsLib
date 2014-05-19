@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import android.content.ComponentName;
 import android.content.Context;
 import android.hmm.lib.intent.IntentHelper;
+import android.hmm.lib.reflect.ReflectHelper;
 
 /**
  * @author heming
@@ -74,6 +77,115 @@ public class MobileHelper {
 	public static String getAndroidVersion() {
 		return android.os.Build.VERSION.RELEASE.toString();
 //		android.os.Build.VERSION.INCREMENTAL.toString();
+	}
+	
+	/**********************************************************************
+	 * Other
+	 *      
+		Build.BOARD // 主板  
+		Build.BRAND // android系统定制商  
+		Build.CPU_ABI // cpu指令集  
+		Build.DEVICE // 设备参数  
+		Build.DISPLAY // 显示屏参数  
+		Build.FINGERPRINT // 硬件名称  
+		Build.HOST  
+		Build.ID // 修订版本列表  
+		Build.MANUFACTURER // 硬件制造商  
+		Build.MODEL // 版本  
+		Build.PRODUCT // 手机制造商  
+		Build.TAGS // 描述build的标签  
+		Build.TIME  
+		Build.TYPE // builder类型  
+		Build.USER 
+		
+		// 当前开发代号  
+		Build.VERSION.CODENAME  
+		// 源码控制版本号  
+		Build.VERSION.INCREMENTAL  
+		// 版本字符串  
+		Build.VERSION.RELEASE  
+		// 版本号  
+		Build.VERSION.SDK  
+		// 版本号  
+		Build.VERSION.SDK_INT
+		
+		
+		Build.VERSION.SDK_INT可与switch搭配用  
+		switch (Build.VERSION.SDK_INT) {  
+		case Build.VERSION_CODES.BASE: // 1.0  
+		    break;  
+		      
+		case Build.VERSION_CODES.BASE_1_1: // 1.1  
+		    break;  
+		      
+		case Build.VERSION_CODES.CUPCAKE: // 1.5  
+		    break;  
+		      
+		case Build.VERSION_CODES.CUR_DEVELOPMENT: // current dev version  
+		    break;  
+		      
+		case Build.VERSION_CODES.DONUT: // 1.6  
+		    break;  
+		      
+		case Build.VERSION_CODES.ECLAIR: // 2.0  
+		    break;  
+		      
+		case Build.VERSION_CODES.ECLAIR_0_1: // 2.0.1  
+		    break;  
+		      
+		case Build.VERSION_CODES.ECLAIR_MR1: // 2.1  
+		    break;  
+		}  
+	 ***********************************************************************/
+	public static String getOther(Context context) {
+		String result = "BOARD=" +android.os.Build.BOARD;
+		result += "\nBOOTLOADER=" +android.os.Build.BOOTLOADER;
+		result += "\nFINGERPRINT=" +android.os.Build.FINGERPRINT;
+		result += "\nHARDWARE=" +android.os.Build.HARDWARE;
+		result += "\nHOST=" +android.os.Build.HOST;
+		result += "\nID=" +android.os.Build.ID;
+		result += "\nPRODUCT=" +android.os.Build.PRODUCT;
+		result += "\nRADIO=" +android.os.Build.RADIO;
+		result += "\nTAGS=" +android.os.Build.TAGS;
+		result += "\nTIME=" +android.os.Build.TIME;
+		result += "\nTYPE=" +android.os.Build.TYPE;
+		result += "\nUSER=" +android.os.Build.USER;
+		result += "\ngetRadioVersion=" +android.os.Build.getRadioVersion();
+		result += "\ngetFirmWare=" + getFirmWare(context);
+		
+		result += "\nVERSION.INCREMENTAL=" + android.os.Build.VERSION.INCREMENTAL;
+		result += "\nVERSION.CODENAME=" + android.os.Build.VERSION.CODENAME;
+		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION.RELEASE;
+		
+		
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.BASE;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.BASE_1_1;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.CUPCAKE;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.CUR_DEVELOPMENT;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.DONUT;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.ECLAIR;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.ECLAIR_0_1;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.ECLAIR_MR1;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.FROYO;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.GINGERBREAD;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.GINGERBREAD_MR1;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.HONEYCOMB;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.HONEYCOMB_MR1;
+//		result += "\nVERSION.RELEASE=" + android.os.Build.VERSION_CODES.ECLAIR_0_1;
+		
+		return result;
+	}
+	
+	public static String getFirmWare(Context context){
+		String result = null;
+		try {
+			Object object =	ReflectHelper.getConstructor(context, "android.os.Build");
+			result = ReflectHelper.getDeclaredField(object.getClass(), "FIRMWARE").toString();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	/**********************************************************************
